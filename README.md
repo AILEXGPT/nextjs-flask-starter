@@ -1,78 +1,81 @@
-<p align="center">
-  <a href="https://nextjs-flask-starter.vercel.app/">
-    <img src="https://assets.vercel.com/image/upload/v1588805858/repositories/vercel/logo.png" height="96">
-    <h3 align="center">Next.js Flask Starter</h3>
-  </a>
-</p>
+# PrivateGPT
 
-<p align="center">Simple Next.js boilerplate that uses <a href="https://flask.palletsprojects.com/">Flask</a> as the API backend.</p>
+Create a QnA chatbot on your documents without relying on the internet by utilizing the capabilities of local LLMs. Ensure complete privacy and security as none of your data ever leaves your local execution environment. Seamlessly process and inquire about your documents even without an internet connection. Inspired from [imartinez](https://github.com/imartinez)
 
-<br/>
+<img width="948" alt="pgpt" src="https://github.com/SamurAIGPT/privateGPT/assets/4326215/76e24cd4-a890-4253-bb87-098c4f1328fd">
 
-## Introduction
+## Contents
 
-This is a hybrid Next.js + Python app that uses Next.js as the frontend and Flask as the API backend. One great use case of this is to write Next.js apps that use Python AI libraries on the backend.
+* [Getting started](#getting-started)
+* [Requirements](#requirements)
+* [How to run](#how-to-run)
+* [Support](#support)
+* [Data](#data)
+* [Check repos](#check-repos)
 
-## How It Works
+## Getting started
 
-The Python/Flask server is mapped into to Next.js app under `/api/`.
+Code is up, ⭐ (Star) the repo meanwhile to receive updates
 
-This is implemented using [`next.config.js` rewrites](https://github.com/vercel/examples/blob/main/python/nextjs-flask/next.config.js) to map any request to `/api/:path*` to the Flask API, which is hosted in the `/api` folder.
+Follow [Anil Chandra Naidu Matcha](https://twitter.com/matchaman11) & [Ankur Singh](https://twitter.com/ankur_maker) on twitter for updates
 
-On localhost, the rewrite will be made to the `127.0.0.1:5328` port, which is where the Flask server is running.
+## Requirements
 
-In production, the Flask server is hosted as [Python serverless functions](https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python) on Vercel.
+* Python 3.8 or later
+* NodeJS v18.12.1 or later
+* Minimum 16GB of memory
 
-## Demo
+## How to run
 
-https://nextjs-flask-starter.vercel.app/
+1. Go to client folder and run the below commands
 
-## Deploy Your Own
+   ```shell
+   npm install   
+   ```
 
-You can clone & deploy it to Vercel with one click:
+   ```shell
+   npm run dev
+   ```
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-title=Next.js%20Flask%20Starter&demo-description=Simple%20Next.js%20boilerplate%20that%20uses%20Flask%20as%20the%20API%20backend.&demo-url=https%3A%2F%2Fnextjs-flask-starter.vercel.app%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F795TzKM3irWu6KBCUPpPz%2F44e0c6622097b1eea9b48f732bf75d08%2FCleanShot_2023-05-23_at_12.02.15.png&project-name=Next.js%20Flask%20Starter&repository-name=nextjs-flask-starter&repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fnextjs-flask&from=vercel-examples-repo)
+2. Go to server folder and run the below commands
 
-## Developing Locally
+   ```shell
+   pip install -r requirements.txt
+   ```
 
-You can clone & create this repo with the following command
+   ```shell
+   python privateGPT.py
+   ```
 
-```bash
-npx create-next-app nextjs-flask --example "https://github.com/vercel/examples/tree/main/python/nextjs-flask"
-```
+3. Open <http://localhost:3000>, click on download model to download the required model initially
 
-## Getting Started
+4. Upload any document of your choice and click on Ingest data. Ingestion is fast
 
-First, install the dependencies:
+5. Now run any query on your data. Data querying is slow and thus wait for sometime
 
-```bash
-npm install
-# or
-yarn
-# or
-pnpm install
-```
+## Support
 
-Then, run the development server:
+Join our discord <https://discord.gg/A6EzvsKX4u> to get support
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Data
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The supported extensions for documents are:
 
-The Flask server will be running on [http://127.0.0.1:5328](http://127.0.0.1:5328) – feel free to change the port in `package.json` (you'll also need to update it in `next.config.js`).
+* .csv: CSV,
+* .docx: Word Document,
+* .enex: EverNote,
+* .eml: Email,
+* .epub: EPub,
+* .html: HTML File,
+* .md: Markdown,
+* .msg: Outlook Message,
+* .odt: Open Document Text,
+* .pdf: Portable Document Format (PDF),
+* .pptx : PowerPoint Document,
+* .txt: Text file (UTF-8),
 
-## Learn More
+## Check repos
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Flask Documentation](https://flask.palletsprojects.com/en/1.1.x/) - learn about Flask features and API.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+* [Langchain Course](https://github.com/SamurAIGPT/langchain-course)
+* [ChatGPT Developer Plugins](https://github.com/SamurAIGPT/ChatGPT-Developer-Plugins)
+* [Camel AGI](https://github.com/SamurAIGPT/Camel-AutoGPT)
